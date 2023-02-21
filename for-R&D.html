@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            padding: 10px 0;
+            align-items: center;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="form" id="form">
+                    <!-- <form id="form" method=""> -->
+                    <div class="u-name">
+                        <label for="#">first name</label>
+                        <input onblur="check(this,'u-eror','enter user name')" type="text" name="" id="user-name">
+                        <span id="u-eror">*</span>
+                    </div>
+                    <div class="l-name">
+                        <label for="#">last name</label>
+                        <input type="text" name="" id="last-name">
+                    </div>
+                    <div class="submit">
+                        <button onclick="myfunction()" id="save">submit</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+
+        function check(e, spn, msg) {
+            if (e.value == "") {
+                document.getElementById(spn).innerHTML = msg;
+            }
+            else {
+                document.getElementById(spn).innerText = "";
+            }
+        }
+        function myfunction() {
+            if (save == "") {
+                alert("plz fill the all fild")
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
